@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test task</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <img
+          class="form__img"
+          src="images/iphone11.jpg"
+          alt="Apple IPhone 11 image"
+        >
+
+        <h2 class="form__info">Apple IPhone 11, цена: 29999 грн</h2>
+        <hr>
+
+        <div class="order-form">
+          <h3 class="order-form-title">
+            Для заказа введите Ваши данные
+          </h3>
+
+          <div class="order-form-input-wrapper">
+            <label class="order-form-label" for="name">
+              Имя :
+            </label>
+
+            <input
+              class="order-form-input"
+              type="text"
+              id="name"
+              required
+              minlength="2"
+              maxlength="32"
+              pattern="[а-яА-ЯёЁ]+"
+              title="Имя может содержать только буквы кирилицы, максимальная длина - 32 символа"
+            >
+          </div>
+
+          <div class="order-form-input-wrapper">
+            <label class="order-form-label" for="tel">
+              Телефон :
+            </label>
+
+            <input
+              class="order-form-input"
+              type="tel"
+              id="tel"
+              required
+              pattern="((38|\+38))(050|063|066|067|073|093|094|095|096|097|098|099)\d{7}"
+              title="Введите номер телефона в формате 380501234567 или +380661234567"
+            >
+          </div>
+
+          <div class="button-wrapper">
+            <button class="order-form-button" id="btn">Оформить заказ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
